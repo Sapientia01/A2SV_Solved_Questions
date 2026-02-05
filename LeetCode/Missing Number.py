@@ -1,3 +1,6 @@
+#  Question link : https://leetcode.com/problems/missing-number/description/
+
+
 # O(1) space and O(n) Time
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:        
