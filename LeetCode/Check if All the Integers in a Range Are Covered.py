@@ -1,3 +1,17 @@
+# using Sets  
+class Solution:
+    def isCovered(self, ranges: List[List[int]], left: int, right: int) -> bool:
+        covered_range = set()
+
+        for start,end in ranges:
+            covered_range.update(list(range(start,end+1)))
+
+        return set(list(range(left,right+1))) <= covered_range
+
+
+
+
+# using prefix sum
 class Solution:
     def isCovered(self, ranges: List[List[int]], left: int, right: int) -> bool:
         covered_range = [0] * 52

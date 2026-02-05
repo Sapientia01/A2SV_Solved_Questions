@@ -3,11 +3,7 @@ class Solution:
     def missingNumber(self, nums: List[int]) -> int:        
         n = len(nums)
         total_sum =  n * (n+1) // 2
-
-        for num in nums:
-            total_sum -= num
-
-        return total_sum
+        return total_sum - sum(nums)
 
 # O(n) space and O(n) Time
 class Solution:
