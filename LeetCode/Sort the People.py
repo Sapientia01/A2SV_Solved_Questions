@@ -1,21 +1,16 @@
 # Question link : https://leetcode.com/problems/sort-the-people/description/
 
-# Question link : https://leetcode.com/problems/sort-the-people/description/
-
 #  Using Count sorting
 class Solution:
     def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
         n = len(names)
-        max_len = max(*heights) +1
+        max_len = max(heights) + 1
+        counting = [0]* max_len
 
-        if n > 1:
-            counting = [0]* max_len
-
-            for i,height in enumerate(heights):
-                counting[height] = names[i]
+        for i,height in enumerate(heights):
+            counting[height] = names[i]
 
         return [name for name in counting if name != 0][::-1]
-
 
 #  Using insertion sorting
 class Solution:
