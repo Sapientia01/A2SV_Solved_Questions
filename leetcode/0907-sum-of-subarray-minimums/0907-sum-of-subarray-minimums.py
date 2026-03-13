@@ -1,5 +1,3 @@
-# https://leetcode.com/problems/sum-of-subarray-minimums/description/
-
 class Solution(object):
     def sumSubarrayMins(self, nums):
         mod = (10**9) + 7
