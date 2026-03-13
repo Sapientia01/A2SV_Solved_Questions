@@ -9,8 +9,7 @@ class Solution:
 
             new_num.append(digit)
 
-        while len(new_num) > n-k:
-            new_num.pop()
+        new_num = new_num[:n-k]
 
         while len(new_num) > 1 and new_num[0] == "0":
             new_num.pop(0)
